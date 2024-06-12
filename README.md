@@ -1,2 +1,2 @@
-# timetable-maker
-Create a train/bus timetable
+# Simple Timetable Maker
+Create a train/bus/tram timetable

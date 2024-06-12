@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="content-type" content="text/plain; charset=UTF-8"/>
-<title>*</title>
+<title>Simple Timetable Maker</title>
 
 <style>
 
@@ -1299,7 +1299,12 @@ for (var i=0, max=all.length; i < max; i++) {
 
 
 </script>
-
+<script>
+window.onbeforeunload = e => {    
+            var dialogText = 'Do you really want to leave this site?';   
+            e.returnValue = dialogText;    
+     return dialogText;};
+</script>
 
 <body>
 <!--start options, delete when complete-->
@@ -1384,23 +1389,7 @@ for (var i=0, max=all.length; i < max; i++) {
 
 <div id="line" style="background-color:#002060;color:white;">
 <span id="change-line">Change line marker: 
-<select class="curved" id="line-letter">
-<option>none</option>
-<option value="">---</option>
-<option value="A">A</option>
-<option value="B">B</option>
-<option value="C">C</option>
-<option value="D">D</option>
-<option value="E">E</option>
-<option value="F">F</option>
-<option value="L">L</option>
-<option value="M">M</option>
-<option value="N">N</option>
-<option value="R">R</option>
-<option value="S">S</option>
-<option value="T">T</option>
-<option value="X">X</option>
-</select>
+<input type="text" id="line-letter"></input>
 Enter no: <input id="line-number" minlength="2" maxlength="4" style="width:40px;">
 <input type="text" id="input-line"></input>
 <input type="submit" onClick="changeheading();" value="Change"><small>
