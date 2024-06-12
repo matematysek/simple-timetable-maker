@@ -68,15 +68,9 @@ color:#FFFFFF;
 
 
 tr.major-interchange td:nth-of-type(1)
-{
-   background-color:#F79646;
-color:#FFFFFF;
-}
+
 tr.absolute td:nth-of-type(1)
-{
-   background-color:#F79646;
-color:#FFFFFF;
-}
+
 
 
 #ln, #color-preview
@@ -94,9 +88,7 @@ color:#FFFFFF;
 color:#F79646;
 }
 tr.major-interchange td:nth-of-type(2), tr.minor-interchange td:nth-of-type(2), tr.absolute td:nth-of-type(2)
-{
-   font-weight:bold;
-}
+
 
 table.navy tr.minor-interchange
 {
@@ -1308,12 +1300,11 @@ window.onbeforeunload = e => {
 
 <body>
 <!--start options, delete when complete-->
-<div id="selector" style="background-color:#F2F2F2;color:#002060;">
+<div id="selector" style="background-color:#F2F2F2;color:#000000;">
 <div>
-<a style="color:#002060" href="../">Exit Timetable Maker</a>
-<h3>Edit Style: <a style="color:#002060;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('stylesheet',this)">Hide</a></h3>
+<h3>Edit Style: <a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('stylesheet',this)">Hide</a></h3>
 
-<div id="stylesheet" style="background-color:#002060;color:white;">
+<div id="stylesheet" style="background-color:#000000;color:white;">
 <span id="change-theme">Change theme font colour:
 <select class="curved" id="themex">
 <option value="navy" selected>Navy (Default)</option>
@@ -1384,10 +1375,10 @@ window.onbeforeunload = e => {
 
 
 </div>
-<h3>Edit Line Name: <a style="color:#002060;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('line',this)">Hide</a></h3>
+<h3>Edit Line Name: <a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('line',this)">Hide</a></h3>
 
 
-<div id="line" style="background-color:#002060;color:white;">
+<div id="line" style="background-color:#000000;color:white;">
 <span id="change-line">Change line marker: 
 <input type="text" id="line-letter"></input>
 Enter no: <input id="line-number" minlength="2" maxlength="4" style="width:40px;">
@@ -1397,18 +1388,13 @@ SYMBOLS: \n = line break (only available without line number); \>> = double arro
 </div>
 
 
-<h3>Edit Timing Points: <a style="color:#002060;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('addstations',this)">Hide</a></h3>
+<h3>Edit Timing Points: <a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('addstations',this)">Hide</a></h3>
 
 
-<div id="addstations" style="background-color:#002060;color:white;">
+<div id="addstations" style="background-color:#000000;color:white;">
 <span id="change-station">Add timing point: <input style="width:150px;" type="text" id="input-station">
 <select class="curved" id="type">
 <option value="st">Normal</option>
-<option value="minor-interchange">Minor Interchange</option>
-<option value="major-interchange">Major Interchange</option>
-<option value="absolute">Central Interchange</option>
-<option value="connection" disabled>Connection</option>
-<option value="spacer">Spacer</option>
 </select>
 <input type="submit" onClick="addstat();updatestat()" value="Append">
 <span>Edit Timing Point: </span>
@@ -1426,10 +1412,10 @@ SYMBOLS: \n = line break (only available without line number); \>> = double arro
 
 
 
-<h3>Edit Stopping Patterns: <a style="color:#002060;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('addpatterns',this)">Hide</a></h3>
+<h3>Edit Stopping Patterns: <a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('addpatterns',this)">Hide</a></h3>
 
 
-<div id="addpatterns" style="background-color:#002060;color:white;">
+<div id="addpatterns" style="background-color:#000000;color:white;">
 <input type="submit" onClick="updatestat()" value="Update">
 <input type="submit" onClick="statadd();updatestat()" value="+"> 
 <input type="submit" onClick="statminus();updatestat()" value="-"> 
@@ -1442,17 +1428,17 @@ SYMBOLS: \n = line break (only available without line number); \>> = double arro
 
 </div>
 
-<h3>Saved Stopping Patterns: <a style="color:#002060;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('editpatterns',this)">Hide</a></h3>
-<div id="editpatterns" style="background-color:#002060;color:white;">
+<h3>Saved Stopping Patterns: <a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('editpatterns',this)">Hide</a></h3>
+<div id="editpatterns" style="background-color:#000000;color:white;">
 <span id="patterncount">Number of stopping patterns: 0</span>
 <span id="savedpatterns">
 </span>
 
 
 </div>
-<h3>Edit Services: <a style="color:#002060;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('addservice',this)">Hide</a></h3>
+<h3>Edit Services: <a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('addservice',this)">Hide</a></h3>
 
-<div id="addservice" style="background-color:#002060;color:white;">
+<div id="addservice" style="background-color:#000000;color:white;">
 <span>Select stopping pattern:</span> <span id="selectpatterns"><select class="curved" style="width:150px;" id="addservicex"><option value=0 selected>---</option></select></span>
 <span>Start Time:</span> <input style="width:22px;" type="text" id="starttime1" maxlength="2" value="04">:<input style="width:22px;" type="text" id="starttime2" maxlength="2" value="00">
 <input type="submit" onClick="addservice()" value="Add"><span> at position </span><input style="width:22px;" type="text" id="positionx" maxlength="3" value=""> <span>(leave blank for end)</span><hr>
@@ -1464,14 +1450,13 @@ SYMBOLS: \n = line break (only available without line number); \>> = double arro
 </span>
 </div>
 <hr>
-<small>Refreshing the page will cause you to lose data</small>
 </div>
 <br>
 
 
 <!--end options-->
-<span id="x2"><a style="color:#002060;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('selector',this);">Print Preview</a></span>
+<span id="x2"><a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('selector',this);">Print Preview</a></span>
 
 <div id="table-1">
-<h1 id="output-line"><span id="ln" style="display:none;"></span><span id="lm" style="display:none;"></span>Timetable Maker</h1>
+<h id="output-line"><span id="ln" style="display:none;"></span><span id="lm" style="display:none;"></span>Made with Simple Timetable Maker (available on GitHub)</h1>
  <table border="0.5" data-count='0' id="times" class="navy"></table></div>
