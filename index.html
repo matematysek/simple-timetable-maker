@@ -640,7 +640,7 @@ document.getElementById("output-line").innerHTML="<span id=\"ln\" style=\"font-s
 ge=cx;
 if (titlex=="")
 {
-document.title="*"
+document.title="Simple Timetable Maker"
 }
 else
 {
@@ -1379,10 +1379,26 @@ window.onbeforeunload = e => {
 
 
 <div id="line" style="background-color:#000000;color:white;">
-<span id="change-line">Change line marker: 
-<input type="text" id="line-letter"></input>
+<span id="change-line">Change line marker (NYC Subway): 
+<select class="curved" id="line-letter">
+<option>none</option>
+<option value="">---</option>
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="C">C</option>
+<option value="D">D</option>
+<option value="E">E</option>
+<option value="F">F</option>
+<option value="L">L</option>
+<option value="M">M</option>
+<option value="N">N</option>
+<option value="R">R</option>
+<option value="S">S</option>
+<option value="T">T</option>
+<option value="X">X</option>
+</select>
 Enter no: <input id="line-number" minlength="2" maxlength="4" style="width:40px;">
-<input type="text" id="input-line"></input>
+<input type="text" id="input-line">
 <input type="submit" onClick="changeheading();" value="Change"><small>
 SYMBOLS: \n = line break (only available without line number); \>> = double arrow right; </small>
 </div>
@@ -1457,5 +1473,6 @@ SYMBOLS: \n = line break (only available without line number); \>> = double arro
 <!--end options-->
 <span id="x2"><a style="color:#000000;position:relative;top:auto;right:0px;" href="javascript:" onClick="hide('selector',this);">Print Preview</a></span>
 <div id="table-1">
-<h id="output-line"><span id="ln" style="display:none;"></span><span id="lm" style="display:none;"></span>Made with Simple Timetable Maker (available on GitHub)</h1>
+
+<h1 id="output-line"><span id="ln" style="display:none;"></span><span id="lm" style="display:none;"></span></h1>
  <table border="0.5" data-count='0' id="times" class="navy"></table></div>
